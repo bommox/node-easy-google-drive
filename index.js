@@ -5,10 +5,13 @@ const googleAuth = require('google-auth-library');
 
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/drive-nodejs-quickstart.json
-const SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly'];
+const SCOPES = [
+    'https://www.googleapis.com/auth/drive.metadata.readonly',
+    'https://www.googleapis.com/auth/drive.file'
+];
 const TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
     process.env.USERPROFILE) + '/.credentials/';
-const TOKEN_PATH = TOKEN_DIR + 'drive-nodejs-sample.json';
+const TOKEN_PATH = TOKEN_DIR + 'drive-nodejs-easy-2-drive.json';
 
 
 class EasyDrive {
@@ -41,7 +44,7 @@ class EasyDrive {
 
 }
 
-function getNewToken(oauth2Client, callback) {
+function getNewToken(oauth2Client) {
     let authUrl = oauth2Client.generateAuthUrl({
         access_type: 'offline',
         scope: SCOPES
