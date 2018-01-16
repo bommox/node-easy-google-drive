@@ -1,0 +1,16 @@
+{
+  "name": "easy-google-drive",
+  "version": "1.0.0",
+  "description": "Easy NodeJS Google Drive API Auth in Promise way",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorgeblom <info@jorgeblom.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "google-auth-library": "^0.12.0",
+    "googleapis": "^24.0.0"
+  }
+}
